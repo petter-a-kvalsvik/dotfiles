@@ -5,7 +5,7 @@ set recolor-lightcolor "#383C4A"
 
 set toggle_statusbar "false"
 
-unmap d
+umap d
 map d set recolor "true"
-unmap t
+umat t
 map t toggle_statusbar
