@@ -1,4 +1,19 @@
-# The following lines were added by compinstall
+ZSH=$HOME/.oh-my-zsh/
+ZSH_THEME="fish"
+
+plugins=(
+    git
+    python-powerline
+)
+
+### ALIASES ###
+
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+alias pl="echo ""; pwd; echo ""; ls; echo "";"
+
+###############
+
+# ----The following lines were added by compinstall
 
 zstyle ':completion:*' completer _complete _ignored _correct _approximate
 zstyle ':completion:*' completions 1
@@ -16,11 +31,10 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory autocd extendedglob notify
 bindkey -v
-# End of lines configured by zsh-newuser-install
+# ----End of lines configured by zsh-newuser-install
+
+### START-SCRIPTS ###
 
 wal -Rtq
 
-### ALIASES ###
-
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
-
+#####################

@@ -351,14 +351,14 @@ bar {
 	colors {
 #       background $transparent
         background $term_color0
-        statusline $term_color8
+        statusline $term_color7
         separator  $i3_separator
 
 #                                  border  backgr. text
-        focused_workspace   $term_color8  $term_background  $term_color8
+        focused_workspace   $term_color7  $term_background  $term_color7
         active_workspace    $term_color8  $term_background  $term_color8
         inactive_workspace  $term_background  $term_background  $term_color6
-        urgent_workspace    $term_background  $term_color1  $term_color8
+        urgent_workspace    $term_background  $term_color8  $term_color7
     }
 }
 
