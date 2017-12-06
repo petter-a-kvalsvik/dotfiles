@@ -1,15 +1,16 @@
 ZSH=$HOME/.oh-my-zsh/
-ZSH_THEME="fish"
+ZSH_THEME="fishy"
 
 plugins=(
     git
-    python-powerline
+    powerline
 )
 
 ### ALIASES ###
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 alias pl="echo ""; pwd; echo ""; ls; echo "";"
+alias ll="ls -alh"
 
 ###############
 

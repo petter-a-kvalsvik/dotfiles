@@ -1,0 +1,69 @@
+*.color0:	#2D253A
+*.color1:	#1862B5
+*.color10:	#2864BB
+*.color11:	#3165BF
+*.color12:	#4658A9
+*.color13:	#3966C2
+*.color14:	#4C69CA
+*.color15:	#719BD0
+*.color2:	#2864BB
+*.color3:	#3165BF
+*.color4:	#4658A9
+*.color5:	#3966C2
+*.color6:	#4C69CA
+*.color66:	#2D253A
+*.color7:	#719BD0
+*.color8:	#817c88
+*.color9:	#1862B5
+*color0:	#2D253A
+*color1:	#1862B5
+*color10:	#2864BB
+*color11:	#3165BF
+*color12:	#4658A9
+*color13:	#3966C2
+*color14:	#4C69CA
+*color15:	#719BD0
+*color2:	#2864BB
+*color3:	#3165BF
+*color4:	#4658A9
+*color5:	#3966C2
+*color6:	#4C69CA
+*color66:	#2D253A
+*color7:	#719BD0
+*color8:	#817c88
+*color9:	#1862B5
+
+URxvt*background:	[70]#2D253A
+URxvt*cursorColor:	#719BD0
+URxvt*depth:	32
+URxvt*foreground:	#719BD0
+URxvt.font: Hack:size=16
+URxvt.resize-font.smaller: C-Down
+URxvt.rebackground:	#2D253A size-font.bigger: C-Up
+
+background:	#2D253A
+foreground:	#719BD0
+
+UXTerm*background:	#2D253A
+UXTerm*cursorColor:	#719BD0
+UXTerm*foreground:	#719BD0
+XClock*background:	#2D253A XClock*foreground:	#719BD0
+XClock*hourColor:	rgba:71/9b/d0/ff
+XClock*majorColor:	rgba:71/9b/d0/ff
+XClock*minorColor:	rgba:71/9b/d0/ff
+XClock*minuteColor:	rgba:71/9b/d0/ff
+XClock*secondColor:	rgba:71/9b/d0/ff
+XTerm*background:	#2D253A
+XTerm*cursorColor:	#719BD0
+XTerm*foreground:	#719BD0
+
+rofi.color-active:	#00000000, #333333, #00000000, #333333, #000000
+rofi.color-normal:	#00000000, #FFFFFF, #00000000, #FFFFFF, #000000
+rofi.color-urgent:	#2D253A, #1862B5, #2D253A, #1862B5, #719BD0
+rofi.color-window:	#95000000, #FFFFFF, #FFFFFF
+rofi.fullscreen:        false
+rofi.padding:           2
+rofi.lines:             10
+rofi.bw:                1
+rofi.case-sensitive:    false
+rofi.dpi:               1
