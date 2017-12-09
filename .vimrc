@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'dylanaraps/wal.vim'
 Plugin 'css_color.vim'
+Plugin 'scrooloose/nerdtree'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -93,6 +94,9 @@ vnoremap ¤ $
 " remap k & j to gk & gj, gjør det lettere ved lange brutte linjer
 nnoremap k gk
 nnoremap j gj
+
+" Open nerdree
+map <C-n> :NERDTreeToggle<CR>
 
 " Vim-LaTeX
 filetype plugin on
