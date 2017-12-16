@@ -36,6 +36,6 @@ bindkey -v
 
 ### START-SCRIPTS ###
 
-wal -Rtq
+#wal -Rtq
 
 #####################
