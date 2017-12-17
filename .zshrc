@@ -1,7 +1,9 @@
-ZSH=$HOME/.oh-my-zsh/
-ZSH_THEME="fishy"
+export ZSH=$HOME/.oh-my-zsh/
+export ZSH_THEME="agnoster"
+source $ZSH/oh-my-zsh.sh
 
 plugins=(
+    oh-my-zsh
     git
     powerline
 )
