@@ -58,12 +58,12 @@ XTerm*cursorColor:	#719BD0
 XTerm*foreground:	#719BD0
 
 rofi.color-active:	#00000000, #333333, #00000000, #333333, #000000
-rofi.color-normal:	#00000000, #ccFFFFFF, #00000000, #00000000, #4C51AD
+rofi.color-normal:	#00000000, #ccFFFFFF, #00000000, #00000000, #7DC1CF
 rofi.color-urgent:	#2D253A, #1862B5, #2D253A, #1862B5, #719BD0
-rofi.color-window:	#95000000, #4C51AD, #4C51AD
+rofi.color-window:	#cc000000, #7DC1CF, #7DC1CF
 rofi.fullscreen:        false
 rofi.padding:           2
 rofi.lines:             10
-rofi.bw:                1
+rofi.bw:                4
 rofi.case-sensitive:    false
 rofi.dpi:               1
