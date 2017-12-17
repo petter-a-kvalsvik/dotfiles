@@ -4,10 +4,10 @@
 [bar/example]
 monitor = eDP-1
 width = 100%
-height = 40
+height = 35
 
 
-background = #aa0E0E0E
+background = #F9232c31
 foreground = #ccffffff
 
 
@@ -18,8 +18,12 @@ spacing = 2
 padding-right = 5
 module-margin = 4
 
-font-1 = SanFrancisco-Regular:size=16;0
-font-0 = FontAwesome:size=16;0
+; font-1 = SanFrancisco-Regular:size=14;0
+font-1 = Hack:size=14;0
+font-0 = FontAwesome:size=14;0
+
+locale = nb_NO.utf8
+
 
 modules-left = i3 mpd
 modules-center = date
@@ -27,12 +31,13 @@ modules-right = volume backlight wireless-network vpn  battery
 
 tray-position = right
 tray-padding = 2
-tray-detached = true
+tray-detached = false
 tray-maxsize = 22
 tray-offset-x = 0
-tray-offset-y = 1040
+tray-offset-y = 0
 ;tray-padding = 0
 tray-scale = 1.0
+tray.transparent = true
 
 [module/i3]
 type = internal/i3
@@ -63,13 +68,13 @@ ramp-0 = 
 
 bar-width = 10
 bar-indicator = |
-bar-indicator-font = 3
+bar-indicator-font = 1
 bar-indicator-foreground = #ff
 bar-fill = ─
-bar-fill-font = 3
-bar-fill-foreground = #CF7127
+bar-fill-font = 1
+bar-fill-foreground = #237986
 bar-empty = ─
-bar-empty-font = 3
+bar-empty-font = 1
 bar-empty-foreground = #44
 
 [module/battery]
@@ -219,7 +224,7 @@ bar-volume-indicator-font = 3
 bar-volume-indicator-foreground = #ff
 bar-volume-fill = ─
 bar-volume-fill-font = 3
-bar-volume-fill-foreground = #CF7127
+bar-volume-fill-foreground = #237986
 ; bar-volume-fill-foreground = #cdcdcdcd
 bar-volume-empty = ─
 bar-volume-empty-font = 3
