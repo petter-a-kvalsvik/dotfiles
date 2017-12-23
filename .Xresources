@@ -1,69 +1,69 @@
-*.color0:	#2D253A
-*.color1:	#1862B5
-*.color10:	#2864BB
-*.color11:	#3165BF
-*.color12:	#4658A9
-*.color13:	#3966C2
-*.color14:	#4C69CA
-*.color15:	#719BD0
-*.color2:	#2864BB
-*.color3:	#3165BF
-*.color4:	#4658A9
-*.color5:	#3966C2
-*.color6:	#4C69CA
-*.color66:	#2D253A
-*.color7:	#719BD0
-*.color8:	#817c88
-*.color9:	#1862B5
-*color0:	#2D253A
-*color1:	#1862B5
-*color10:	#2864BB
-*color11:	#3165BF
-*color12:	#4658A9
-*color13:	#3966C2
-*color14:	#4C69CA
-*color15:	#719BD0
-*color2:	#2864BB
-*color3:	#3165BF
-*color4:	#4658A9
-*color5:	#3966C2
-*color6:	#4C69CA
-*color66:	#2D253A
-*color7:	#719BD0
-*color8:	#817c88
-*color9:	#1862B5
+! Nord colors
+! https://github.com/arcticicestudio/nord
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
 
-URxvt*background:	[70]#000000
-URxvt*cursorColor:	#719BD0
-URxvt*depth:	32
-URxvt*foreground:	[90]#ffffff
-URxvt.font: Hack:size=16
-URxvt.resize-font.smaller: C-Down
-URxvt.rebackground:	#2D253A size-font.bigger: C-Up
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+*fading: 35
+*fadeColor: nord3
 
-background:	#000000
-foreground:	#ffffff
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6 
 
-UXTerm*background:	#2D253A
-UXTerm*cursorColor:	#719BD0
-UXTerm*foreground:	#719BD0
-XClock*background:	#2D253A XClock*foreground:	#719BD0
-XClock*hourColor:	rgba:71/9b/d0/ff
-XClock*majorColor:	rgba:71/9b/d0/ff
-XClock*minorColor:	rgba:71/9b/d0/ff
-XClock*minuteColor:	rgba:71/9b/d0/ff
-XClock*secondColor:	rgba:71/9b/d0/ff
-XTerm*background:	#2D253A
-XTerm*cursorColor:	#719BD0
-XTerm*foreground:	#719BD0
+! == URxvt settings == !
 
-rofi.color-active:	#00000000, #333333, #00000000, #333333, #000000
-rofi.color-normal:	#00000000, #ccFFFFFF, #00000000, #00000000, #7DC1CF
-rofi.color-urgent:	#2D253A, #1862B5, #2D253A, #1862B5, #719BD0
-rofi.color-window:	#cc000000, #7DC1CF, #7DC1CF
+URxvt.font:             xft:Monaco:size=14:antialias=true,xft:Source Code Pro for Powerline:antialias=true:hinting=true:size=14
+URxvt.scrollBar:        false
+URxvt.scrollTtyKeypress:true
+
+! == /URxvt settings == !
+
+! == Rofi settings == !
+! 
+!                       'background', 'border', 'dividing line'
+rofi.color-window:	    #2E3440, #D8DEE9, #D8DEE9
+!                       'bg',   'fg'    'bgalt'   'hlbg'   'hlfg'
+rofi.color-normal:	    #2E3440, #D8DEE9, #2E3440, #5E81AC, #2E3440
+rofi.color-active:	    #D8DEE9, #5E81AC, #00000000, #D8DEE9, #000000
+rofi.color-urgent:	    #D8DEE9, #5E81AC, #00000000, #D8DEE9, #000000
+
+rofi.font:              Monaco 14
 rofi.fullscreen:        false
 rofi.padding:           2
 rofi.lines:             10
 rofi.bw:                4
 rofi.case-sensitive:    false
 rofi.dpi:               1
+rofi.hide-scrollbar:    true
+!
+! == /Rofi settings == !

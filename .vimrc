@@ -15,6 +15,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'dylanaraps/wal.vim'
 Plugin 'css_color.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'arcticicestudio/nord-vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
