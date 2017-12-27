@@ -18,16 +18,17 @@ padding-right = 5
 module-margin = 4
 
 ; font-1 = SanFrancisco-Regular:size=14;0
-; font-1 = Hack:size=14;0
+font-0 = FontAwesome:size=16;0
 font-1 = Monaco:size=14;0
-font-0 = FontAwesome:size=14;0
+font-2 = Hack:size=14;0
+font-3 = FontAwesome:size=16;0
 
 locale = nb_NO.utf8
 
 
 modules-left = i3 mpd
 modules-center = date
-modules-right = volume backlight wireless-network vpn  battery
+modules-right = volume backlight wireless-network battery
 
 tray-position = right
 tray-padding = 2
@@ -73,13 +74,13 @@ ramp-0 = 
 
 bar-width = 10
 bar-indicator = |
-bar-indicator-font = 1
+bar-indicator-font = 3
 bar-indicator-foreground = #ff
 bar-fill = ─
-bar-fill-font = 1
+bar-fill-font = 3
 bar-fill-foreground = #5E81AC
 bar-empty = ─
-bar-empty-font = 1
+bar-empty-font = 3
 bar-empty-foreground = #44
 
 [module/battery]
