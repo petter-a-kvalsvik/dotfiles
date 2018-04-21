@@ -1,4 +1,4 @@
-export ZSH=$HOME/.oh-my-zsh/
+export ZSH=/usr/share/oh-my-zsh
 export ZSH_THEME="agnoster"
 source $ZSH/oh-my-zsh.sh
 
@@ -10,7 +10,7 @@ plugins=(
 
 ### ALIASES ###
 
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias pl="echo ""; pwd; echo ""; ls; echo "";"
 alias ll="ls -alh"
 
