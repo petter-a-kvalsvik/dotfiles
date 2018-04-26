@@ -42,7 +42,7 @@
 
 ! == URxvt settings == !
 
-URxvt.font:             xft:Hack:size=14:antialias=true,xft:Source Code Pro for Powerline:antialias=true:hinting=true:size=14,xft:FontAwesome:size:14
+URxvt.font:             xft:Hack:size=14:antialias=true,xft:Source Code Pro for Powerline:antialias=true:hinting=true:size=14,xft:FontAwesome:antialias=true:size:14
 URxvt.scrollBar:        false
 URxvt.scrollTtyKeypress:true
 
@@ -50,12 +50,21 @@ URxvt.scrollTtyKeypress:true
 
 ! == Rofi settings == !
 ! 
+!!                       NORD COLORS:
+!!                       'background', 'border', 'dividing line'
+!rofi.color-window:	    #2E3440, #D8DEE9, #D8DEE9
+!!                       'bg',   'fg'    'bgalt'   'hlbg'   'hlfg'
+!rofi.color-normal:	    #2E3440, #D8DEE9, #2E3440, #5E81AC, #2E3440
+!rofi.color-active:	    #D8DEE9, #5E81AC, #00000000, #D8DEE9, #000000
+!rofi.color-urgent:	    #D8DEE9, #5E81AC, #00000000, #D8DEE9, #000000
+!
 !                       'background', 'border', 'dividing line'
-rofi.color-window:	    #2E3440, #D8DEE9, #D8DEE9
+rofi.color-window:	    #000000, #D8DEE9, #D8DEE9
 !                       'bg',   'fg'    'bgalt'   'hlbg'   'hlfg'
-rofi.color-normal:	    #2E3440, #D8DEE9, #2E3440, #5E81AC, #2E3440
+rofi.color-normal:	    #000000, #D8DEE9, #000000, #5E81AC, #000000
 rofi.color-active:	    #D8DEE9, #5E81AC, #00000000, #D8DEE9, #000000
 rofi.color-urgent:	    #D8DEE9, #5E81AC, #00000000, #D8DEE9, #000000
+
 
 rofi.font:              Monaco 14
 rofi.fullscreen:        false

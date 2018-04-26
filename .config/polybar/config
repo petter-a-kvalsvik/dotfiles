@@ -6,8 +6,11 @@ width = 100%
 height = 35
 
 ; 'NORD' colors
-background = #2E3440
-foreground = #D8DEE9
+;background = #2E3440
+;foreground = #D8DEE9
+
+background = #90000000
+foreground = #000000
 
 
 line-color = ${bar/example.background}
@@ -23,22 +26,22 @@ font-1 = Monaco:size=14;0
 font-2 = Hack:size=14;0
 font-3 = FontAwesome:size=16;0
 
-locale = nb_NO.utf8
+;locale = nb_NO.utf8
 
 
 modules-left = i3 mpd
 modules-center = date
-modules-right = volume backlight wireless-network battery
+modules-right = vpn vpn2 wireless-network volume backlight battery
 
-tray-position = right
-tray-padding = 2
-tray-detached = false
-tray-maxsize = 22
-tray-offset-x = 0
-tray-offset-y = 0
-;tray-padding = 0
-tray-scale = 1.0
-tray.transparent = true
+;tray-position = right
+;tray-padding = 2
+;tray-detached = false
+;tray-maxsize = 22
+;tray-offset-x = 0
+;tray-offset-y = 0
+;;tray-padding = 0
+;tray-scale = 1.0
+;tray.transparent = true
 
 [module/i3]
 type = internal/i3
@@ -60,6 +63,7 @@ label-mode-background = ${bar/example.background}
 ;label-focused = %index%
 label-focused = %name%
 label-focused-background = #222222
+label-focused-foreground = #F9B84F
 label-focused-padding = 2
 
 ;lael-unfocused = %index%
@@ -78,7 +82,7 @@ bar-indicator-font = 3
 bar-indicator-foreground = #ff
 bar-fill = ─
 bar-fill-font = 3
-bar-fill-foreground = #5E81AC
+bar-fill-foreground = #F9B84F
 bar-empty = ─
 bar-empty-font = 3
 bar-empty-foreground = #44
@@ -150,8 +154,21 @@ ramp-coreload-7-foreground = #ff5555
 
 [module/date]
 type = internal/date
-date = %%{F#99}%d/%m%%{F-}  %%{F#fff}%H:%M%%{F-}
-date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
+
+; Seconds to sleep between updates
+interval = 1.0
+
+; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+date = %H:%M
+
+; Optional time format
+time = %H:%M
+
+; if `date-alt` or `time-alt` is defined, clicking
+; the module will toggle between formats
+date-alt = %A, %d %B %Y
+time-alt = %H:%M:%S
 
 [module/memory]
 type = internal/memory
@@ -174,7 +191,9 @@ bar-used-empty-foreground = #444444
 
 [module/mpd]
 type = internal/mpd
-format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <bar-progress> <label-time>  <label-song>
+format-playing = <icon-prev> <icon-stop> <toggle> <icon-next> <label-song>
+format-paused = <icon-pause> MPD Paused
+format-stopped =
 
 icon-play = 
 icon-pause = 
@@ -215,7 +234,7 @@ animation-packetloss-1-foreground = ${bar/example.foreground}
 animation-packetloss-framerate = 500
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 
 format-volume = <ramp-volume> <label-volume> <bar-volume>
 label-muted =  muted
@@ -230,7 +249,7 @@ bar-volume-indicator-font = 3
 bar-volume-indicator-foreground = #ff
 bar-volume-fill = ─
 bar-volume-fill-font = 3
-bar-volume-fill-foreground = #5E81AC
+bar-volume-fill-foreground = #F9B84F
 bar-volume-empty = ─
 bar-volume-empty-font = 3
 bar-volume-empty-foreground = #44
@@ -243,9 +262,16 @@ exec-if = pgrep -x openvpn
 interval = 5
 format-prefix = " "
 
-[module/clock]
-type = internal/date
-interval = 2
-date = %%{F#999}%d/%m-%Y%%{F-}  %%{F#fff}%H:%M%%{F-}
+[module/vpn2]
+type = custom/script
+exec = echo VPN
+exec-if = pgrep -x openconnect
+interval = 5
+format-prefix = " "
+
+;[module/clock]
+;type = internal/date
+;interval = 2
+;date = %%{F#999}%d/%m-%Y%%{F-}  %%{F#fff}%H:%M%%{F-}
 
 ; vim:ft=dosini

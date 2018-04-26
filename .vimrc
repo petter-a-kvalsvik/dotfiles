@@ -15,7 +15,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'dylanaraps/wal.vim'
 Plugin 'css_color.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'arcticicestudio/nord-vim'
+" Plugin 'arcticicestudio/nord-vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -50,6 +50,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 syntax on
+colorscheme wal
 
 " sett linjenummerering
 set number

@@ -2,6 +2,9 @@ export ZSH=/usr/share/oh-my-zsh
 export ZSH_THEME="agnoster"
 source $ZSH/oh-my-zsh.sh
 
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
+
 plugins=(
     oh-my-zsh
     git
