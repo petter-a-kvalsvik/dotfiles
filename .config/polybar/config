@@ -29,7 +29,7 @@ font-3 = FontAwesome:size=16;0
 ;locale = nb_NO.utf8
 
 
-modules-left = i3 mpd
+modules-left = i3 player-mpris-tail
 modules-center = date
 modules-right = vpn vpn2 wireless-network volume backlight battery
 
@@ -275,3 +275,11 @@ format-prefix = " "
 ;date = %%{F#999}%d/%m-%Y%%{F-}  %%{F#fff}%H:%M%%{F-}
 
 ; vim:ft=dosini
+
+[module/player-mpris-tail]
+type = custom/script
+exec = ~/polybar-scripts/player-mpris-tail.py
+tail = true
+click-left = ~/polybar-scripts/player-ctrl.sh previous
+click-right = ~/polybar-scripts/player-ctrl.sh next
+click-middle = ~/polybar-scripts/player-ctrl.sh play-pause
