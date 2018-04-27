@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+######################################################
+# thanks to https://github.com/x70b1 for this script #
+######################################################
+
 import time
 import sys
 import subprocess

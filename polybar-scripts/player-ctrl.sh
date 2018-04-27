@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+######################################################
+# thanks to https://github.com/x70b1 for this script #
+######################################################
+
 function listPlayers {
     dbus-send --session --dest=org.freedesktop.DBus --type=method_call --print-reply /org/freedesktop/DBus \
         org.freedesktop.DBus.ListNames | grep org.mpris.MediaPlayer2 | awk -F\" '{print $2}' | cut -d '.' -f4-
