@@ -49,7 +49,7 @@ bindsym $mod+Ctrl+m exec pavucontrol
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 
 bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -bf
+bindsym $mod+Ctrl+t exec --no-startup-id compton -bf --shadow-exclude-reg 1920x35+0+0
 
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
@@ -133,14 +133,14 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1:I
-set $ws2 2:II
-set $ws3 3:III
-set $ws4 4:IV
-set $ws5 5:V
-set $ws6 6:VI
-set $ws7 7:VII
-set $ws8 8:VIII
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -390,7 +390,7 @@ gaps outer 5
 # gaps outer all plus 5
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+#smart_gaps on
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
@@ -453,10 +453,10 @@ bindsym $mod+Ctrl+l exec /usr/share/i3lock-fancy/lock
 
 ########### More startmup things ################
 #
-exec --no-startup-id compton -f
+exec --no-startup-id compton -bf --shadow-exclude-reg 1920x35+0+0
 exec --no-startup-id mpd
 exec --no-startup-id dropbox
-exec_always --no-startup-id wal -R
+exec_always --no-startup-id wal -Rntq
 exec_always --no-startup-id ~/.config/polybar/launcher.sh
 #
 #################################################

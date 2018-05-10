@@ -3,13 +3,13 @@
 [bar/example]
 monitor = eDP-1
 width = 100%
-height = 35
+height = 20
 
 ; 'NORD' colors
 ;background = #2E3440
 ;foreground = #D8DEE9
 
-background = #90000000
+background = #00000000
 foreground = #000000
 
 
@@ -20,11 +20,11 @@ spacing = 2
 padding-right = 5
 module-margin = 4
 
-; font-1 = SanFrancisco-Regular:size=14;0
-font-0 = FontAwesome:size=16;0
-font-1 = Monaco:size=14;0
-font-2 = Hack:size=14;0
-font-3 = FontAwesome:size=16;0
+font-1 = SanFrancisco-Display:size=13;0
+font-0 = FontAwesome:size=13;0
+;font-1 = Monaco:size=13;0
+font-2 = Hack:size=13;0
+font-3 = FontAwesome:size=14;0
 
 ;locale = nb_NO.utf8
 
@@ -63,7 +63,8 @@ label-mode-background = ${bar/example.background}
 ;label-focused = %index%
 label-focused = %name%
 label-focused-background = #222222
-label-focused-foreground = #F9B84F
+;label-focused-foreground = #45969D
+label-focused-foreground = #9fffffff
 label-focused-padding = 2
 
 ;lael-unfocused = %index%
@@ -82,7 +83,8 @@ bar-indicator-font = 3
 bar-indicator-foreground = #ff
 bar-fill = ─
 bar-fill-font = 3
-bar-fill-foreground = #F9B84F
+;bar-fill-foreground = #45969D
+bar-fill-foreground = #9fffffff
 bar-empty = ─
 bar-empty-font = 3
 bar-empty-foreground = #44
@@ -249,7 +251,8 @@ bar-volume-indicator-font = 3
 bar-volume-indicator-foreground = #ff
 bar-volume-fill = ─
 bar-volume-fill-font = 3
-bar-volume-fill-foreground = #F9B84F
+;bar-volume-fill-foreground = #45969D
+bar-volume-fill-foreground = #9fffffff
 bar-volume-empty = ─
 bar-volume-empty-font = 3
 bar-volume-empty-foreground = #44
