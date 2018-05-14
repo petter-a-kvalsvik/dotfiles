@@ -458,5 +458,6 @@ exec --no-startup-id mpd
 exec --no-startup-id dropbox
 exec_always --no-startup-id wal -Rntq
 exec_always --no-startup-id ~/.config/polybar/launcher.sh
+exec_always --no-startup-id "killall conky; conky -c .config/conky/geddy/geddy.conkyrc --pause=5"
 #
 #################################################
