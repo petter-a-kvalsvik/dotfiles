@@ -1,5 +1,4 @@
 # i3 config file
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
@@ -24,7 +23,8 @@ font xft:Monaco 14
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+set $term --no-startup-id urxvt
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -119,11 +119,14 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+#bindsym $mod+Shift+minus move scratchpad
 
-# Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+# Scratchpad stuff
+# open close the "dropdown" terminal
+bindsym $mod+minus [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
+
+# open close the R (calculatator) terminal
+bindsym $mod+plus [instance="math"] scratchpad show; [instance="math"] move position center
 
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
@@ -441,8 +444,9 @@ bindsym $mod+d exec --no-startup-id rofi -show run -config ~/.Xresources
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
 
-# launch google-chrome
-bindsym $mod+g exec google-chrome-stable --URL=APP
+# launch web browser
+bindsym $mod+g exec brave --URL=APP
+#bindsym $mod+g exec google-chrome-stable --URL=APP
 
 # launch file manager
 bindsym $mod+p exec pcmanfm
@@ -451,11 +455,25 @@ bindsym $mod+p exec pcmanfm
 #bindsym $mod+Ctrl+l exec i3lock -i ~/Pictures/systemlockd.png
 bindsym $mod+Ctrl+l exec /usr/share/i3lock-fancy/lock
 
+# opening scratchpads
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] resize set 800 600
+for_window [instance="dropdown"] move scratchpad
+for_window [instance="dropdown"] border pixel 2
+exec --no-startup-id $term -name dropdown
+
+for_window [instance="math"] floating enable
+for_window [instance="math"] resize set 800 400
+for_window [instance="math"] move scratchpad
+for_window [instance="math"] border pixel 5
+exec --no-startup-id $term -name math -f mono:pixelsize=24 -e R -q
+
 ########### More startmup things ################
 #
 exec --no-startup-id compton -bf --shadow-exclude-reg 1920x35+0+0
 exec --no-startup-id mpd
 exec --no-startup-id dropbox
+exec --no-startup-id unclutter
 exec_always --no-startup-id wal -Rntq
 exec_always --no-startup-id ~/.config/polybar/launcher.sh
 exec_always --no-startup-id "killall conky; conky -c .config/conky/geddy/geddy.conkyrc --pause=5"
