@@ -41,6 +41,6 @@ bindkey -v
 
 ### START-SCRIPTS ###
 
-wal -Rntq -a 70
+#wal -Rntq -a 70
 
 #####################

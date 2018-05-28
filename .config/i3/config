@@ -49,7 +49,7 @@ bindsym $mod+Ctrl+m exec pavucontrol
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 
 bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -bf --shadow-exclude-reg 1920x35+0+0
+bindsym $mod+Ctrl+t exec --no-startup-id compton -cb --config ~/.config/compton.conf
 
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
@@ -470,11 +470,11 @@ exec --no-startup-id $term -name math -f mono:pixelsize=24 -e R -q
 
 ########### More startmup things ################
 #
-exec --no-startup-id compton -bf --shadow-exclude-reg 1920x35+0+0
+exec --no-startup-id compton -cb --config ~/.config/compton.conf
 exec --no-startup-id mpd
 exec --no-startup-id dropbox
 exec --no-startup-id unclutter
-exec_always --no-startup-id wal -Rntq
+#exec_always --no-startup-id wal -Rntq
 exec_always --no-startup-id ~/.config/polybar/launcher.sh
 exec_always --no-startup-id "killall conky; conky -c .config/conky/geddy/geddy.conkyrc --pause=5"
 #
