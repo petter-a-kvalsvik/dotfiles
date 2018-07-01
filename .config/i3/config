@@ -453,7 +453,7 @@ bindsym $mod+p exec pcmanfm
 
 # lock screen
 #bindsym $mod+Ctrl+l exec i3lock -i ~/Pictures/systemlockd.png
-bindsym $mod+Ctrl+l exec /usr/share/i3lock-fancy/lock
+bindsym $mod+Ctrl+l exec --no-startup-id /usr/share/i3lock-fancy/lock
 
 # opening scratchpads
 for_window [instance="dropdown"] floating enable

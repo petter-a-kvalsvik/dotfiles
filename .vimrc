@@ -11,10 +11,12 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'dylanaraps/wal.vim'
 Plugin 'css_color.vim'
 Plugin 'scrooloose/nerdtree'
+" Plugin 'lervag/vimtex'
 " Plugin 'arcticicestudio/nord-vim'
 
 " The following are examples of different formats supported.
